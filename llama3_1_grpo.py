@@ -43,6 +43,10 @@ Use `PatchFastRL` before all functions to patch GRPO and other RL algorithms!
 from unsloth import FastLanguageModel, PatchFastRL
 PatchFastRL("GRPO", FastLanguageModel)
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
 """Load up `Llama 3.1 8B Instruct`, and set parameters"""
 
 from unsloth import is_bfloat16_supported
@@ -195,7 +199,7 @@ training_args = GRPOConfig(
     max_completion_length = 200,
     # num_train_epochs = 1, # Set to 1 for a full training run
     max_steps = 250,
-    save_steps = 250,
+    save_steps = 50,
     max_grad_norm = 0.1,
     report_to = "none", # Can use Weights & Biases
     output_dir = "outputs",
