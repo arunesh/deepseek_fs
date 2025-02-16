@@ -67,4 +67,3 @@ def evaluate_model(model, tokenizer, dataset):
 
 accuracy = evaluate_model(model, tokenizer, test_dataset)
 print(f"Accuracy: {accuracy}")
-return accuracy
